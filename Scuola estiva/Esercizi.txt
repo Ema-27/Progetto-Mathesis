@@ -1,0 +1,93 @@
+1)
+Verificare se un numero è pari o dispari
+
+Password
+
+Valutazione del tipo di triangolo
+
+Massimo di tre numeri
+
+Media
+
+Conteggio pari e dispari
+
+Somma dei valori dispari da 1 ad n-->while, for
+
+2)
+
+Comprensione
+Si consideri il seguente brano di codice:
+lista = [3, 6, 8, 16, 8, 16]
+ok = True
+i = 0
+while i<len(lista) // 2 and ok:
+ if lista[i] > lista[len(lista)-1-i]:
+ ok = False
+ i += 1
+if ok:
+ print('OK')
+else:
+ print('NO')
+Si descriva sinteticamente la funzione svolta dal brano. Si discuta inoltre l’effetto che si otterrebbe 
+utilizzando nell’if la condizione alternativa “lista[i] > lista[-1-i]”
+
+
+
+
+Si consideri il seguente brano di codice:
+v = [1, 2, 3, 4, 6, 2, 1]
+d = 7
+s = 0
+while s < d and v[s] == v[d-1]:
+ s += 1
+ d -= 1
+if s < d-1:
+ print('NO'); 
+else:
+ print('SI'); 
+Si descriva sinteticamente la funzione svolta dal brano.
+
+
+Si consideri il seguente brano di codice:
+lista =[3,2,4,7,2,3,5]
+for i in range(len(lista)):
+ if i % 2 == 0 and lista[i] % 2 == 0:
+ print(lista[i])
+ if i % 2 != 0 and lista[i] % 2 != 0:
+ print(lista[i])
+Si descriva sinteticamente la funzione svolta dal brano
+
+
+Si consideri il seguente brano di codice:
+x = [3,2,5,4]
+y = [8,20,6,9]
+d = 4
+n = [False] * d
+for i in range(d):
+ if y[i] % x[-1-i] == 0:
+ n[i] = True
+print(n)
+Si descriva sinteticamente la funzione svolta dal brano.
+
+
+3)
+Si scriva una funzione “alternati” che riceve in input una lista l e restituisce True se la lista contiene 
+valori alternati pari e dispari, cioè non ci sono due elementi consecutivi entrambi pari o entrambi 
+dispari, e False altrimenti. Si invochi inoltre la funzione sulle liste [2, 5, 8, 3, 2], [1, 2, 3, 4, 0] e [1, 
+1, 2, 3, 4, 5] e se ne discutano i risultati.
+
+
+
+Si scriva una funzione “controlla_lista” che riceve in input una lista di interi e
+- se non tutti gli elementi sono uguali, stampa il massimo, il minimo e gli indici di tali elementi;
+- se tutti gli elementi sono uguali, ne stampa il valore. 
+La funzione non deve utilizzare le funzioni “max” e “min” di Python e inoltre può utilizzare un solo ciclo for.
+
+
+Si scriva una funzione “genera_lista” che riceve in input due liste di interi V1 e V2 di uguale lunghezza e 
+restituisce una lista di interi V3 di lunghezza pari a quella di V1 e V2, il cui generico elemento i è così 
+ottenuto:
+- Se i è pari, V3[i] è la somma degli elementi di V1 con indice maggiore di i. 
+- Se i è dispari, V3[i] è il prodotto degli elementi di V2 con indice maggiore di i.
+- L’ultimo elemento di V3 è posto uguale a 0.
+Ad esempio, se V1 = [ 2, 5, 11, 3, 7 ] e V2 = [ 1, 2, 4, 3, 2], la lista restituita è V3 = [ 26, 24, 10, 2, 0].
