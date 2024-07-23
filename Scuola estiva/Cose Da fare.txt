@@ -1,0 +1,64 @@
+#Questo è un commento
+s='#questo non è un commento'
+2+2
+6/3
+7/3
+base=2 altezza=4
+area=base*altezza
+print(area) print('Ciao')
+parola='Buongiorno' parola+'a'
+concetto immutabilità
+parola*5
+len(parola) len('ciao')
+parola[0], ...., [-1]->modularità conteggio
+liste-->mutabilità e immutabilità
+concatenazione
+a.append('ciao')-->liste annidate
+
+PRIMI ESEMPI
+
+while
+#La serie di Fibonacci
+#la somma di due elementi definisce il successivo
+a,b = 0,1
+while b<100:
+  a,b=b,a+b
+
+if
+
+x=int(input('introdurre un numero')
+if x<0:
+  print('il numero è negativo')
+else if x==0:
+  print('il numero è zero')
+else:
+  print('il numero è positivo')
+
+for
+#Misura la lunghezza delle stringhe
+a=['gatto', 'cane', 'Serra', 'finestra']
+for x in a:
+  print(x, len(x))
+
+funzione range
+range(10)   range[5,10]    range(0,10,3)
+for i in range(len(a)):
+  print(x, len(x))
+
+
+
+
+operazioni sulle liste
+.append(x)
+.insert(i,x)
+.remove(x)
+.index(x)
+.count(x)
+.sort(x)
+.reverse(x)
+.pop()
+.lower()
+#.join(lista)
+
+
+
