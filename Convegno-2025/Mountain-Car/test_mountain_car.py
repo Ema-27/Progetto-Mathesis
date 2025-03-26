@@ -1,22 +1,28 @@
 import gymnasium as gym
 from stable_baselines3 import DQN
 
-# Creazione dell'ambiente con visualizzazione
-env = gym.make("MountainCar-v0", render_mode="human")
+def test():
+    # Creiamo l'ambiente con la modalità di rendering
+    env = gym.make("MountainCar-v0", render_mode="human")
 
-# Addestramento del modello
-model = DQN("MlpPolicy", env, verbose=1)
-model.learn(total_timesteps=50000)
+    # Carica il modello salvato
+    model = DQN.load("mountaincar_dqn_model")
 
-# Reset dell'ambiente prima della visualizzazione
-obs, _ = env.reset()
-
-# Esecuzione dell'agente addestrato con rendering
-for _ in range(500):
-    action, _ = model.predict(obs, deterministic=True)
-    obs, reward, done, truncated, _ = env.step(action)
-    env.render()  # Visualizza il gioco a schermo
-    if done or truncated:
+    # Testa il modello su 10 partite
+    num_episodes = 1
+    for episode in range(num_episodes):
+        print(f"Partita {episode + 1}")
         obs, _ = env.reset()
+        done = False
+        total_reward = 0
+        while not done:
+            action, _ = model.predict(obs, deterministic=True)
+            obs, reward, done, truncated, _ = env.step(action)
+            total_reward += reward
+            env.render()
+        print(f"Risultato partita {episode + 1}: {'VITTORIA' if total_reward > 0 else 'SCONFITTA'}")
 
-env.close()
+    env.close()
+
+if __name__ == "__main__":
+    test()

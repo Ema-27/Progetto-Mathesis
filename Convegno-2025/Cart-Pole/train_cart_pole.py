@@ -23,7 +23,7 @@ model = PPO(
 )
 
 # Addestramento del modello
-model.learn(total_timesteps=100000)
+model.learn(total_timesteps=20000)
 
 # Salvataggio del modello
 model.save("cartpole_ppo")

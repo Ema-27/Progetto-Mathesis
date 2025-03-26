@@ -74,4 +74,10 @@ plt.ylabel("Valore medio della Q-table")
 plt.title("Evoluzione della Q-table")
 plt.legend()
 
+print("Q-table finale:")
+print(q_table)
+
 plt.show()
+
+
+
